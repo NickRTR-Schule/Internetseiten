@@ -16,3 +16,7 @@ th {
     background-color: khaki;
     border: 1px solid black;
 }
+
+td.rot {
+    color: red;
+}
