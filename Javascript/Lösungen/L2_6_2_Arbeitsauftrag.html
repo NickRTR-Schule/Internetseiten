@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function calculate() {
+                let preis = parseFloat(document.getElementById("benzinpreis").value);
+                let verbrauch = parseFloat(document.getElementById("verbrauch").value);
+                let strecke = parseFloat(document.getElementById("strecke").value);
+
+                alert(`Benzinkosten für die eingegebene Fahrt: ${(preis * verbrauch * strecke) / 100} €`);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Benzinpreisrechner</h1>
+
+        <p>Benzinpreis: <input type="text" placeholder="Benzinpreis" id="benzinpreis" /> €</p>
+        <p>Durchschnittlicher Verbrauch: <input type="text" placeholder="Verbrauch" id="verbrauch" /> l/100km</p>
+        <p>zurückgelegte Strecke: <input type="text" placeholder="Strecke" id="strecke" /> km</p>
+
+        <button onclick="calculate()" id="eingabe">Bezinpreis berechnen</button>
+    </body>
+</html>
