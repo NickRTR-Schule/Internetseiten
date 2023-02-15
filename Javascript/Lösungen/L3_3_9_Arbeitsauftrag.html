@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Kalender</h1>
+
+        <div id="form">
+            <div>
+                <p>Anzahl Tage:</p>
+                <input id="tage" type="number" required placeholder="Anzahl Tage" />
+            </div>
+            <br />
+            <button type="submit" onclick="zeigeKalender()">Erstellen</button>
+        </div>
+
+        <section>
+            <h2>Erstellter Kalender</h2>
+            <div id="ausgabe"></div>
+        </section>
+    </body>
+
+    <script>
+        function zeigeKalender() {
+            let anzahlTage = parseInt(document.getElementById("tage").value) + 1;
+
+            let ausgabe = "<table><th>Mo</th><th>Di</th><th>Mi</th><th>Do</th><th>Fr</th><th>Sa</th><th>So</th>";
+            for (let woche = 0; woche < anzahlTage / 7; woche++) {
+                ausgabe += "<tr>";
+                for (let t = 1; t <= 7; t++) {
+                    if (woche * 7 + t < anzahlTage) {
+                        ausgabe += `<td>${woche * 7 + t}</td>`;
+                    }
+                }
+                ausgabe += "</tr>";
+            }
+            ausgabe += "</table>";
+            document.getElementById("ausgabe").innerHTML = ausgabe;
+        }
+    </script>
+</html>
