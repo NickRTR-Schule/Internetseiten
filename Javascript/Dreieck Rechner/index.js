@@ -27,7 +27,7 @@ function berechneDreieck() {
     ausgabe += dasDreieck.umfang();
     ausgabe += "</p>";
 
-    let ausgabe = "<h3>Umfang</h3><p>";
+    ausgabe = "<h3>Umfang</h3><p>";
     ausgabe += dasDreieck.umfang();
     ausgabe += "</p>";
 
